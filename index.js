@@ -10,12 +10,12 @@ function log(text) {
 
 function stats(values) {
   var h1 = document.getElementById('stats');
-  h1.innerHTML = JSON.stringify(values);
+  h1.innerHTML = JSON.stringify(values, null, 4);
 }
 
 // Listen on events
-miner.on('found', function() { log('hash found') })
-miner.on('accepted', function() { log('hash accepted') })
+// miner.on('found', function() { log('hash found') })
+// miner.on('accepted', function() { log('hash accepted') })
 
 // Update stats once per second
 setInterval(function() {
